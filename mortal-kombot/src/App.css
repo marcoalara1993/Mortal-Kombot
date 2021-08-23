@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  background-color: cyan;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .react-chatbot-kit-chat-bot-message{
+  width: 200;
+  margin-left: 0;
+}
+
+.react-chatbot-kit-chat-container {
+  width: 500px;
+} */
