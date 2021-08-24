@@ -1,4 +1,3 @@
-
 class MessageParser {
   constructor(actionProvider, state) {
     this.actionProvider = actionProvider;
@@ -17,8 +16,9 @@ class MessageParser {
       lowerCase.includes("market") ||
       lowerCase.includes("supermarket")
     ) {
-      return this.actionProvider.handleMarket();
+      return this.actionProvider.handleMarket();      
     }
+
     // visitar a la familia
     if (
       lowerCase.includes("visita") ||
@@ -36,10 +36,31 @@ class MessageParser {
     }
     // Lista de personas que conozco
     if (
-      lowerCase.includes("todos") ||      
-      lowerCase.includes("todo")
+      lowerCase.includes("usuarios") ||      
+      lowerCase.includes("users")
     ) {
-      return this.actionProvider.handlerTodos();
+      return this.actionProvider.handlerDataUsers();
+    }
+
+    // ver series
+    if (
+      lowerCase.includes("series") ||
+      lowerCase.includes("netflix") ||
+      lowerCase.includes("disney") ||
+      lowerCase.includes("televisión") ||
+      lowerCase.includes("videos") ||
+      lowerCase.includes("HBO") ||
+      lowerCase.includes("pelicula")
+    ) {
+      return this.actionProvider.handleWatchAScreen();
+    }
+
+     // Descansar y/o dormir
+     if (
+      lowerCase.includes("dormir") ||      
+      lowerCase.includes("descansar")
+    ) {
+      return this.actionProvider.handlerSleep();
     }
 
     // Mensaje cuando no entiendo

@@ -1,7 +1,10 @@
 import React from 'react';
 import { createChatBotMessage } from "react-chatbot-kit";
-import Todos from '../Widgets/Todos';
-import SecondQuestion from '../Widgets/SecondQuestion'
+import DataUsers from '../Widgets/DataUsers';
+import Parque from '../Widgets/Park'
+import Options from "../main-options-widget/options.jsx"
+import SecondQ from '../Widgets/SecondQuestion'
+
 
 const botName = "Mortal Kombot";
 
@@ -28,27 +31,40 @@ const config = {
        {
          withAvatar: false,
          delay: 1000,
-        //  widget: "todos",  //esto es una prueba para llamar de inmediato a los nombres de la api
+         widget: "Options"
+        //  widget: "DataUsers",  //esto es una prueba para llamar de inmediato a los nombres de la api
        }
      ),    
   ],
   state: {
-    todos: []
+    DataUsers: []
   },
   widgets: [ 
     {
-      widgetName: "todos",
-      widgetFunc: (props) => <Todos {...props} />, //funcion a llamar para resolver internamente
-      mapStateToProps: ["todos"], // que partes o piezas quiero pasar cuando se monte el widget
+      widgetName: "Options",
+      widgetFunc: (props) => <Options {...props} />, //funcion a llamar para resolver internamente
+      mapStateToProps: ["Options"], // que partes o piezas quiero pasar cuando se monte el widget
       props: {} //estados a recibir
     },
     {
-      widgetName: "SecondQuestion",
-      widgetFunc: (props) => <SecondQuestion {...props} />, //funcion a llamar para resolver internamente
-      mapStateToProps: ["SecondQuestion"], // que partes o piezas quiero pasar cuando se monte el widget
+      widgetName: "SecondQ",
+      widgetFunc: (props) => <SecondQ {...props} />, //funcion a llamar para resolver internamente
+      mapStateToProps: ["SecondQ"], // que partes o piezas quiero pasar cuando se monte el widget
+      props: {} //estados a recibir
+    },
+    {
+      widgetName: "DataUsers",
+      widgetFunc: (props) => <DataUsers {...props} />, //funcion a llamar para resolver internamente
+      mapStateToProps: ["DataUsers"], // que partes o piezas quiero pasar cuando se monte el widget
+      props: {} //estados a recibir
+    },
+    {
+      widgetName: "Parque",
+      widgetFunc: (props) => <Parque {...props} />, //funcion a llamar para resolver internamente
+      mapStateToProps: ["Parque"], // que partes o piezas quiero pasar cuando se monte el widget
       props: {}, //estados a recibir
       delay: 500
-    }
+    }  
   ]
 };
 

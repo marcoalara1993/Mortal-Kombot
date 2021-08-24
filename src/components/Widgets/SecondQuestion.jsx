@@ -1,15 +1,8 @@
-import React from 'react';
-import Park from '../../images/Japan-Park.jpg'
+import React from "react";
 import './SecondQuestion.css'
 
-const SecondQuestion = (props) => {    
-    return <div >
-        <img 
-            className="img-park"
-            src={Park} 
-            alt="Parque Japones"
-        />
-    </div>
-}
+const SecondQ = () => {     
+    return <div className="secondQ-look">Y despues que piensas hacer?</div>;  
+};
 
-export default SecondQuestion;
+export default SecondQ;
