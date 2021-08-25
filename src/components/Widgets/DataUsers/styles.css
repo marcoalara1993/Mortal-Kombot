@@ -1,0 +1,29 @@
+.todos-widget {
+  color: rgb(38, 126, 118);
+}
+
+.users-widget-list {
+  margin: 0 5px;
+  padding: 0;
+}
+
+.users-widget-list-item {
+  font-size: 1rem;
+  margin: 8px 0;
+  text-align: left;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.users-list {
+  list-style-type: none;
+  border-bottom: 2px solid rgb(39, 141, 189);
+  /* color: #fff; */
+}
+
+/* IMAGEN DE FONDO DE MORTAL KOMBAT "SOLO PRUEBA"*/
+/* .react-chatbot-kit-chat-message-container{
+    background-image: url("https://www.kolpaper.com/wp-content/uploads/2021/02/iPhone-Mortal-Kombat-Wallpaper-3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}  */
