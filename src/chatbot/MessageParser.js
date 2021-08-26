@@ -1,4 +1,4 @@
-//colocar que hace el message parse (leer docu)
+// controla lo que sucede cuando el usuario envía un mensaje
 
 const MARKET_KEYWORDS = ["mercado", "supermercado", "market", "supermarket"];
 const USERS_KEYWORDS = ["user", "users", "usuarios", "usuario", "personas"];

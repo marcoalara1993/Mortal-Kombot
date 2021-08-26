@@ -5,6 +5,9 @@ import Park from "../components/Widgets/Park";
 import Options from "../components/Options";
 import SecondQuestion from "../components/Widgets/SecondQuestion";
 
+
+//Configuraciones Generales del Bot //
+
 const botName = "Mortal Kombot";
 
 const config = {
@@ -43,36 +46,31 @@ const config = {
       withAvatar: false,
       delay: 1000,
       widget: "Options",
-      //  widget: "DataUsers",  //esto es una prueba para llamar de inmediato a los nombres de la api
+      
     }),
-  ],
-  state: {
-    DataUsers: [],
-  },
+  ],  
   widgets: [
     {
       widgetName: "Options",
       widgetFunc: (props) => <Options {...props} />, //funcion a llamar para resolver internamente
-      mapStateToProps: ["Options"], // que partes o piezas quiero pasar cuando se monte el widget
-      props: {}, //estados a recibir
+      mapStateToProps: ["Options"], // que partes o piezas quiero pasar cuando se monte el widget      
     },
     {
       widgetName: "SecondQuestion",
       widgetFunc: (props) => <SecondQuestion {...props} />, //funcion a llamar para resolver internamente
       mapStateToProps: ["SecondQuestion"], // que partes o piezas quiero pasar cuando se monte el widget
-      props: {}, //estados a recibir
+     // props: {}, //estados a recibir
     },
     {
       widgetName: "DataUsers",
       widgetFunc: (props) => <DataUsers {...props} />, //funcion a llamar para resolver internamente
-      mapStateToProps: ["DataUsers"], // que partes o piezas quiero pasar cuando se monte el widget
-      props: {}, //estados a recibir
+      mapStateToProps: ["DataUsers"], // que partes o piezas quiero pasar cuando se monte el widget      
     },
     {
       widgetName: "Park",
       widgetFunc: (props) => <Park {...props} />, //funcion a llamar para resolver internamente
-      mapStateToProps: ["Park"], // que partes o piezas quiero pasar cuando se monte el widget
-      props: {} //estados a recibir      
+      mapStateToProps: ["Park"] // que partes o piezas quiero pasar cuando se monte el widget
+      
     }
   ],
 };

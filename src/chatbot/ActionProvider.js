@@ -1,4 +1,4 @@
-//colocar que hace el action provider (leer docu)
+//El actionProvider controla qué tipo de acción va a realizar el chatbot.
 
 const buildMessageConfig = (withAvatar, widgetName) => {
   return {
@@ -8,8 +8,10 @@ const buildMessageConfig = (withAvatar, widgetName) => {
 }
 
 class ActionProvider {
+  // The action provider receives createChatBotMessage which you can use to define the bots response, and 
+  // the setState function that allows for manipulating the bots internal state.
   constructor(createChatBotMessage, setStateFunc) {
-    this.createChatBotMessage = createChatBotMessage;
+    this.createChatBotMessage = createChatBotMessage; //CreateChatBotMessage construye un chatBotMessage que puede insertar en el estado de los chatbots. Define la respuesta del mensaje de chat tambien en widgets
     this.setState = setStateFunc;
   }
 

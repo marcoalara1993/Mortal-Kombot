@@ -17,7 +17,7 @@ const Options = (props) => {
 
     {
       text: "Salir a pasear",
-      handler: props.actionProvider.handlePark,
+      handler: props.actionProvider.handleWalk,
       id: 3,
     },
   ];
